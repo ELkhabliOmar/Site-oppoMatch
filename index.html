@@ -231,8 +231,8 @@
           <div class="image-container">
             <img src="images/oppo/13.png" alt="Coach en réflexion" />
           </div>
-          <!-- Texte sur la moitié droite -->
-          <div class="wow fadeInLeft">
+          <!-- Texte sur la moitié droite avec animation conservée -->
+          <div class="wow fadeInLeft text-container">
             <h2>Problématiques des Coachs</h2>
             <h3>Pourquoi nous ?</h3>
             <p>Les entraîneurs de football amateur font face à plusieurs défis :</p>
@@ -247,100 +247,85 @@
       </section>
       
       <style>
-        /* Conteneur principal en Flexbox */
-        .wow.fadeInLeft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centre verticalement */
-  align-items: flex-start; /* Aligne le contenu à gauche */
-  text-align: left; /* Assure que le texte reste aligné à gauche */
-  height: 100vh;
-  width: 80%;
-  max-width: 700px;
-  padding: 20px;
-  margin: auto;
-}
-
-
-
-.wow.fadeInLeft h2 {
-  font-size: 2rem; /* Augmente la taille du titre */
-  font-weight: bold;
-}
-
-.wow.fadeInLeft h3 {
-  font-size: 1.5rem; /* Taille intermédiaire pour le sous-titre */
-  color: #555; /* Change la couleur pour un effet stylé */
-}
-
-.wow.fadeInLeft p {
-  font-size: 1.2rem; /* Texte plus lisible */
-}
-
-.wow.fadeInLeft ul {
-  font-size: 1.1rem; /* Ajuste la taille des éléments de liste */
-}
-
-.wow.fadeInLeft li {
-  margin-bottom: 10px; /* Ajoute de l'espace entre les éléments */
-}
-
+        /* Conteneur principal */
         .row-flex {
           display: flex;
-          width: 100vw; /* Prend toute la largeur de l'écran */
-          height: 100vh; /* Prend toute la hauteur de l'écran */
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
         }
       
-        /* Image qui prend 50% de l'écran */
-        .image-container {
+        /* Image et texte prennent chacun 50% sur grand écran */
+        .image-container, .text-container {
           flex: 1;
           width: 50%;
-          height: 100vh;
-          overflow: hidden; /* Empêche le débordement */
         }
       
+        /* Image bien ajustée */
         .image-container img {
           width: 100%;
           height: 100%;
-          object-fit: cover; /* Ajuste l'image sans déformation */
+          object-fit: cover;
         }
       
-        /* Texte qui prend l'autre moitié de l'écran */
+        /* Texte bien centré avec animation */
         .text-container {
-          flex: 1;
-          width: 50%;
-          padding: 40px;
           display: flex;
           flex-direction: column;
           justify-content: center;
+          padding: 20px;
           text-align: left;
+          max-width: 700px;
         }
       
-        /* Responsive : Affichage en colonne pour mobile */
+        /* Garde les styles d'animation existants */
+        .wow.fadeInLeft {
+          animation: fadeInLeft 1s ease-in-out;
+        }
+      
+        /* Responsive */
         @media (max-width: 768px) {
           .row-flex {
             flex-direction: column;
-            height: auto;
           }
+          
           .image-container, .text-container {
             width: 100%;
-            height: auto;
           }
+      
           .image-container img {
-            height: 300px; /* Ajuste la hauteur pour éviter un trop grand espace */
+            max-height: 300px;
+          }
+      
+          .text-container {
+            padding: 20px;
+          }
+        }
+      
+        /* Animation (si non incluse ailleurs) */
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
           }
         }
       </style>
+      
       
           <!--Notre Solution-->
           <section class="section section-sm section-first bg-default">
             <div class="row-flex">
               <!-- Image pleine moitié gauche -->
               <div class="image-container">
-                <img src="images/oppo/4.png" alt="Coach en réflexion" />
+                <img src="images/oppo/8.jpg" alt="Coach en réflexion" />
               </div>
               <!-- Texte sur la moitié droite -->
-              <div class="wow fadeInLeft">
+              <div class="wow fadeInLeft text-container">
                 <h2>Notre Solution</h2>
 <!--                 <h3>Pourquoi nous ?</h3>
  -->                <p> Notre solution Nous simplifions la planification et l’organisation des matchs grâce à une plateforme innovante :</p>
@@ -367,7 +352,7 @@
                 <img src="images/oppo/5.jpg" alt="Coach en réflexion" />
               </div>
               <!-- Texte sur la moitié droite -->
-              <div class="wow fadeInLeft">
+              <div class="wow fadeInLeft text-container">
                 <h2> Pour Qui ?</h2>
 <!--                 <h3>Pourquoi nous ?</h3>
  -->                
@@ -391,7 +376,7 @@
                 <img src="images/oppo/7.png" alt="Coach en réflexion" />
               </div>
               <!-- Texte sur la moitié droite -->
-              <div class="wow fadeInLeft">
+              <div class="wow fadeInLeft text-container">
                 <h2>Tarification </h2>
 <!--                 <h3>Pourquoi nous ?</h3>
  -->                <p>  Abonnement Notre plateforme fonctionne sur un système d’abonnement simple et accessible :</p>
