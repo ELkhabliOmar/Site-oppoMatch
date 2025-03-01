@@ -224,112 +224,125 @@
 
 
 
-      <!--Problématiques des Coachs-->
-      <section class="section section-sm section-first bg-default">
-        <div class="row-flex">
-          <!-- Image pleine moitié gauche -->
-          <div class="image-container">
-            <img src="images/oppo/13.png" alt="Coach en réflexion" />
-          </div>
-          <!-- Texte sur la moitié droite avec animation conservée -->
-          <div class="wow fadeInLeft text-container">
-            <h2>Problématiques des Coachs</h2>
-            <h3>Pourquoi nous ?</h3>
-            <p>Les entraîneurs de football amateur font face à plusieurs défis :</p>
-            <ul>
-              <li><span class="check">✅</span> Difficulté pour organiser des matchs amicaux</li>
-              <li><span class="check">✅</span> Manque de compétitivité et de suivi des performances</li>
-              <li><span class="check">✅</span> Besoin de partage d’idées et de bonnes pratiques</li>
-              <li><span class="check">✅</span> Renforcement du réseau et de la cohésion entre clubs</li>
-            </ul>
-          </div>
-        </div>
-      </section>
       
-      <style>
-        /* Conteneur principal */
-        .row-flex {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-        }
-      
-        /* Image et texte prennent chacun 50% sur grand écran */
-        .image-container, .text-container {
-          flex: 1;
-          width: 50%;
-        }
-      
-        /* Image bien ajustée */
-        .image-container img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      
-        /* Texte bien centré avec animation */
-        .text-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 20px;
-          text-align: left;
-          max-width: 700px;
-        }
-      
-        /* Garde les styles d'animation existants */
-        .wow.fadeInLeft {
-          animation: fadeInLeft 1s ease-in-out;
-        }
-      
-        /* Responsive */
-        @media (max-width: 768px) {
-          .row-flex {
-            flex-direction: column;
-          }
-          
-          .image-container, .text-container {
-            width: 100%;
-          }
-      
-          .image-container img {
-            max-height: 300px;
-          }
-      
-          .text-container {
-            padding: 20px;
-          }
-        }
-      
-        /* Animation (si non incluse ailleurs) */
-        @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      </style>
-      
-      
+      <!--*****************************************************-->
+
+      <!-- Nouvelle version créative avec image en plein écran -->
+<section class="section section-sm section-first bg-default images-fullscreen">
+  <div class="hero-container">
+    <!-- Image de fond en plein écran -->
+<!--     <div class="hero-image"></div>
+ -->       <!-- Image pleine moitié gauche -->
+       <div class="hero-image">
+        <img src="images/oppo/13.png" alt="Coach en réflexion" />
+      </div>
+    <!-- Contenu textuel animé -->
+    <div class="hero-text wow fadeInLeft">
+      <h2>Problématiques des Coachs</h2>
+      <h3>Pourquoi nous ?</h3>
+      <p>Les entraîneurs de football amateur font face à plusieurs défis :</p>
+      <ul class="checklist">
+        <li><span class="check">✅</span> Difficulté pour organiser des matchs amicaux</li>
+        <li><span class="check">✅</span> Manque de compétitivité et de suivi des performances</li>
+        <li><span class="check">✅</span> Besoin de partage d’idées et de bonnes pratiques</li>
+        <li><span class="check">✅</span> Renforcement du réseau et de la cohésion entre clubs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Suppression des marges et padding entre sections */
+  .section.section-sm.section-first.bg-default.images-fullscreen  {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .images-fullscreen {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Conteneur principal stylisé pour plein écran */
+  .hero-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  /* Liste stylisée */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .check {
+    margin-right: 10px;
+    font-size: 22px;
+  }
+
+  /* Image de fond couvrant tout l'écran */
+  .hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/mnt/data/image.png') no-repeat center;
+    background-size: cover;
+    filter: none; /* Supprime le flou */
+  }
+
+  /* Texte positionné au centre */
+  .hero-text {
+    position: relative;
+    max-width: 700px;
+    padding: 40px;
+    color: #fff;
+    z-index: 2;
+    background: rgba(7, 77, 134, 0.6);
+    border-radius: 10px;
+  }
+
+  /* Animation pour le texte */
+  .wow.fadeInLeft {
+    animation: fadeInLeft 1s ease-in-out;
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>
+
+
+
+
+      <!--*****************************************************-->
           <!--Notre Solution-->
-          <section class="section section-sm section-first bg-default">
-            <div class="row-flex">
+          <section class="section section-sm section-first bg-default images-fullscreen">
+            <div class="hero-container">
               <!-- Image pleine moitié gauche -->
-              <div class="image-container">
+              <div class="hero-image">
                 <img src="images/oppo/8.jpg" alt="Coach en réflexion" />
               </div>
               <!-- Texte sur la moitié droite -->
-              <div class="wow fadeInLeft text-container">
+              <div class="hero-text wow fadeInLeft">
                 <h2>Notre Solution</h2>
 <!--                 <h3>Pourquoi nous ?</h3>
  -->                <p> Notre solution Nous simplifions la planification et l’organisation des matchs grâce à une plateforme innovante :</p>
-                <ul>
+                <ul class="checklist">
                   <li><span class="check">✅</span>  Recherche de matchs :
                     Trouvez facilement des adversaires disponibles</li>
                   <li><span class="check">✅</span> Visibilité accrue (pour les coachs et les clubs) : Mettez en avant votre club et votre expertise</li>
@@ -340,19 +353,20 @@
             </div>
           </section>
           
+          
  
           
 
           <!-- Pour Qui ?-->
-          <section class="section section-sm section-first bg-default">
-            <div class="row-flex">
+          <section class="section section-sm section-first bg-default images-fullscreen">
+            <div class="hero-container">
               <!-- Image pleine moitié gauche -->
                
-              <div class="image-container">
+              <div class="hero-image">
                 <img src="images/oppo/5.jpg" alt="Coach en réflexion" />
               </div>
               <!-- Texte sur la moitié droite -->
-              <div class="wow fadeInLeft text-container">
+              <div class="hero-text wow fadeInLeft">
                 <h2> Pour Qui ?</h2>
 <!--                 <h3>Pourquoi nous ?</h3>
  -->                
@@ -369,18 +383,18 @@
 
           
           <!--Tarification -->
-          <section class="section section-sm section-first bg-default">
-            <div class="row-flex">
+          <section class="section section-sm section-first bg-default images-fullscreen">
+            <div class="hero-container">
               <!-- Image pleine moitié gauche -->
-              <div class="image-container">
+              <div class="hero-image">
                 <img src="images/oppo/7.png" alt="Coach en réflexion" />
               </div>
               <!-- Texte sur la moitié droite -->
-              <div class="wow fadeInLeft text-container">
+              <div class="hero-text wow fadeInLeft">
                 <h2>Tarification </h2>
 <!--                 <h3>Pourquoi nous ?</h3>
  -->                <p>  Abonnement Notre plateforme fonctionne sur un système d’abonnement simple et accessible :</p>
-                <ul>
+ <ul class="checklist">
                   <li><span class="check">📌</span>  Accès illimité à toutes les fonctionnalités essentielles</li>
                   <li><span class="check">📌</span>  Formule flexible : abonnement mensuel ou annuel, selon vos besoins</li>
                   <li><span class="check">📌</span>  Tarification accessible pour offrir une solution adaptée à tous, où que vous soyez</li>
