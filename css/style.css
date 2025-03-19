@@ -7198,13 +7198,13 @@ html:not(.lt-ie10) .not-animated {
 	transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
 	animation: loader 1.2s infinite ease-in-out;
 }
-
+/* pour couleur de loader */
 .cssload-container span {
 	position: absolute;
 	display: block;
 	width: 40px;
 	height: 40px;
-	background-color: #50ba87;
+	background-color: #4db1e5;
 	animation: loaderBlock 1.2s infinite ease-in-out both;
 }
 
