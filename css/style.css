@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Réinitialisation des marges et padding */
 .section.section-sm.section-first.bg-default.images-fullscreen,
 .images-fullscreen {
@@ -18,7 +19,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-  /* margin-bottom: 2rem;  */
+   margin-bottom: 2rem 0;  
   /* margin-top: 2rem; *//* Espace entre les sections */
 }
 /* ➕ Nouvelle classe pour inverser image/texte */
@@ -30,6 +31,10 @@
   width: 50%;
   height: 100%;
   overflow: hidden;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-right: 1.5rem;
+  
 }
 
 .hero-image img {
@@ -37,20 +42,37 @@
   height: 100%;
   object-fit: cover;
   animation: fadeInScale 1s ease-out;
+  border-radius: 12px;
 }
 
 /* Bloc texte à droite */
-.hero-text {
+/* .hero-text {
   width: 50%;
   height: 100%;
-  padding: 3rem 3rem 3rem 2rem; /* espace horizontal */
+  padding: 3rem 3rem 3rem 2rem; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: none !important;
   animation: slideInRight 1s ease-out;
   color: white;
-}
+} */
+.hero-text {
+	width: 46%;
+	height: 90%;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(0, 123, 255, 0.85); /* Bleu avec transparence */
+	animation: fadeInCard 1s ease-out;
+	border-radius: 12px;
+	color: white;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	margin: 2.5rem;
+	animation: fadeInCard 1s ease-out;
+  }
+  
 
 /* Titres */
 .hero-text h2 {
@@ -114,7 +136,17 @@
     transform: translateX(0);
   }
 }
-
+@keyframes fadeInCard {
+	from {
+	  opacity: 0;
+	  transform: translateY(30px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
 /* Responsive pour mobile */
 /* Responsive pour mobile */
 @media (max-width: 768px) {
@@ -125,10 +157,15 @@
 	}
   
 	.hero-image,
-	.hero-text {
+	/* .hero-text {
 	  width: 100%;
 	  height: auto;
-	}
+	} */
+	.hero-text {
+		padding: 2rem;
+		margin: 1rem;
+		border-radius: 10px;
+	  }
   
 	.hero-image img {
 	  height: auto;
@@ -185,11 +222,109 @@
 } */
 
 
+.app-grid {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 2rem;
+	padding: 2rem;
+	background: transparent; /* ou image de fond */
+	color: white;
+	text-align: center;
+	flex-wrap: wrap;
+  }
+  
+  .app-column {
+	flex: 1 1 30%; /* prend 30% de l'espace, wrap si pas assez */
+	max-width: 33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+  }
+  
+  .app-description {
+	min-height: 150px;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #fff;
+	padding: 0 1rem;
+  }
+  
+  .app-column img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+	transition: transform 0.3s ease;
+  }
+  
+  .app-column img:hover {
+	transform: scale(1.05);
+  }
+  
 
+/* tarification ///////////////////////////////////////////// */
 
-
-
-
+.pricing-section {
+	padding: 4rem 2rem;
+	background: transparent;
+	color: white;
+	text-align: center;
+  }
+  
+  .pricing-title {
+	font-size: 2.5rem;
+	margin-bottom: 3rem;
+	color: #ffffff;
+  }
+  
+  .pricing-cards {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+  }
+  
+  .pricing-card {
+	background: rgba(255, 255, 255, 0.08); /* Transparent / glass effect */
+	border-radius: 15px;
+	padding: 2rem;
+	min-width: 260px;
+	max-width: 300px;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+	transform: translateY(-5px);
+  }
+  
+  .pricing-card h3 {
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+	color: #00c3ff;
+  }
+  
+  .price-row {
+	display: flex;
+	justify-content: space-between;
+	margin: 1rem 0;
+	font-size: 1.1rem;
+  }
+  
+  .label {
+	font-weight: 500;
+	color: #ddd;
+  }
+  
+  .price {
+	font-weight: bold;
+	color: #fff;
+  }
+  
 
 
 
@@ -6872,7 +7007,7 @@ p.rights {
 	font-size: 14px;
 	letter-spacing: .025em;
 	font-weight: 500;
-	color: #9b9b9b;
+	color: #ffffff;
 }
 
 p.rights a {
