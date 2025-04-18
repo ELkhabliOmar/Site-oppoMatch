@@ -223,52 +223,32 @@
 }
 
 /* Rendre les blocs de texte lisibles */
-.hero-text {
-    background: rgba(28, 106, 170, 0.7); /* Ajoute une légère opacité */
-    padding: 20px;
-    border-radius: 10px;
+.hero-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  height: 100vh;           /* prend toute la hauteur de l’écran */
+  position: relative;
 }
+
+.hero-text {
+  display: inline-block;
+  background: rgba(28, 106, 170, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  height: auto; /* ou fixe si tu veux */
+  text-align: left;
+}
+
+
   </style>
   
 <!-- <style>
 
 </style> -->
 
-      <!--*****************************************************-->
-
-      <section class="app-grid">
-        <div class="app-column">
-          <p class="app-description">Grâce à notre application accéder facilement à tous les matchs amicaux à venir. une navigation fluide pour ne rien manquer des rencontres importantes rester informé vivez chaque match comme si vous y étiez !</p>
-          <img src="images/oppo/16.png" alt="Page d'accueil" />
-        </div>
-        <div class="app-column">
-          <p class="app-description">Les messages peuvent désormais être diffusés dans différents forums et catégories, simplifiant ainsi la gestion par rapport aux nombreux groupes existants !                                                        </p>
-          <img src="images/oppo/17.png" alt="Profil utilisateur" />
-        </div>
-        <div class="app-column">
-          <p class="app-description">La recherche permet de trouver facilement des matchs amicaux pour oppomatcher !                                                                                                                                   </p>
-          <img src="images/oppo/18.png" alt="Liste des matchs" />
-        </div>
-      </section>
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--*****************************************************-->
+   
 
 
 
@@ -319,6 +299,28 @@
               </div>
             </div>
           </section>
+
+
+             <!--*****************************************************-->
+
+      <section class="app-grid">
+        <div class="app-column">
+          <p class="app-description">Grâce à notre application accéder facilement à tous les matchs amicaux à venir. une navigation fluide pour ne rien manquer des rencontres importantes rester informé vivez chaque match comme si vous y étiez !</p>
+          <img src="images/oppo/16.png" alt="Page d'accueil" />
+        </div>
+        <div class="app-column">
+          <p class="app-description">Les demandes de match amicaux peuvent désormais être diffusés dans différents forums et catégories, simplifiant ainsi la gestion par rapport aux nombreux groupes existants !                                                        </p>
+          <img src="images/oppo/17.png" alt="Profil utilisateur" />
+        </div>
+        <div class="app-column">
+          <p class="app-description">La recherche permet de trouver facilement des matchs amicaux pour oppomatcher !                                                                                                                                   </p>
+          <img src="images/oppo/18.png" alt="Liste des matchs" />
+        </div>
+      </section>
+
+  
+
+      <!--*****************************************************-->
              <!--Tarification -->
 
              <section class="pricing-section">
