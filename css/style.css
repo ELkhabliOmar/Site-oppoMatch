@@ -166,7 +166,11 @@
 	  padding: 1rem;
 	  margin: 0;
 	}
-  
+	section {
+		margin: 0;
+		padding: 0;
+	  }
+	  
 	.hero-text {
 	  text-align: center;
 	  border-radius: 10px;
