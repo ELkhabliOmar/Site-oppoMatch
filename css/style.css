@@ -19,7 +19,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-   margin-bottom: 2rem 0;  
+   margin: 2rem 0;  
   /* margin-top: 2rem; *//* Espace entre les sections */
 }
 /* ➕ Nouvelle classe pour inverser image/texte */
@@ -155,6 +155,9 @@
 	  flex-direction: column;
 	  height: auto;
 	}
+	.section-spacing {
+		margin-bottom: 1rem; /* Réduit l’espace vertical entre les sections */
+	  }
   
 	.hero-image,
 	.hero-text {
@@ -168,6 +171,7 @@
 	  text-align: center;
 	  border-radius: 10px;
 	  background: rgba(0, 123, 255, 0.85);
+	  margin: 0 !important;
 	}
   
 	.hero-text h2 {
@@ -200,6 +204,13 @@
 	  height: auto;
 	  border-radius: 10px;
 	}
+	.hero-container {
+		margin: 0 !important; /* Supprime les marges verticales autour du conteneur principal */
+		padding: 0 !important;
+	  }
+	.hero-image {
+		margin: 0 !important; /* Supprime les marges autour de l'image */
+	  }
   }
   
   
