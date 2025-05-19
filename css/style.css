@@ -149,6 +149,22 @@
   
 /* Responsive pour mobile */
 /* Responsive pour mobile */
+.mobile-separator {
+  display: none;
+  height: 12px;
+  background-color: rgba(28, 106, 170, 0.7); /* plus visible */
+  margin: 1.5rem 0;
+  width: 100%; /* optionnel */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .mobile-separator {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
 	.hero-container,
 	.hero-container.reverse {
