@@ -318,7 +318,9 @@
   }
   
   .pricing-card {
-	background: rgba(255, 255, 255, 0.08); /* Transparent / glass effect */
+/* 	background: rgba(255, 255, 255, 0.08); */ /* Transparent / glass effect */
+		background: rgba(28, 106, 170, 0.7);; /* Transparent / glass effect */
+
 	border-radius: 15px;
 	padding: 2rem;
 	min-width: 260px;
